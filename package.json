@@ -2,10 +2,14 @@
   "name": "loan-calc",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "cross-env NODE_ENV=production webpack",
+    "watch": "webpack --watch",
+    "dev": "cross-env NODE_ENV=development webpack serve"
   },
+  "browserslist": "> 0.25%, not dead",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/aleksei24/loan-calc.git"
