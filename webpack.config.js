@@ -2,11 +2,12 @@ const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const { Webpack } = require('webpack');
-const autoprefixer = require('autoprefixer');
+const { webpack } = require('webpack');
+
+const mode = process.env.NODE_ENV || 'development';
 
 module.exports = {
-  mode: 'development',
+  mode: mode,
 
   entry: './src/index.js',
 
@@ -47,7 +48,7 @@ module.exports = {
             loader: 'postcss-loader',
             options: {
               postcssOptions: {
-                plugins: [autoprefixer],
+                plugins: ['autoprefixer'],
               },
             },
           },
