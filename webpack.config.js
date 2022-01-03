@@ -3,6 +3,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const { Webpack } = require('webpack');
+const autoprefixer = require('autoprefixer');
 
 module.exports = {
   mode: 'development',
@@ -34,6 +35,23 @@ module.exports = {
         use: {
           loader: 'babel-loader',
         },
+      },
+
+      {
+        test: /\.(s[ac]|c)ss$/i,
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          'sass-loader',
+          {
+            loader: 'postcss-loader',
+            options: {
+              postcssOptions: {
+                plugins: [autoprefixer],
+              },
+            },
+          },
+        ],
       },
     ],
   },
