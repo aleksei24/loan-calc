@@ -7,6 +7,26 @@
     <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app">
+      <h1 id="app-headline">Loan Calculator</h1>
+      <form action="#" id="loan-form">
+        <label for="amount">
+          Amount of the loan ($)
+          <input name="amount" id="amount" type="text" />
+        </label>
+        <label for="interest">
+          Annual interest (%)
+          <input name="interest" id="interest" type="text" />
+        </label>
+        <label for="payment">
+          Repayment period (year)
+          <input name="payment" id="payment" type="text" />
+        </label>
+        <label for="approximate">
+          Approximate Payments
+          <button type="button" id="calculate">Calculate</button>
+        </label>
+      </form>
+    </div>
   </body>
 </html>
