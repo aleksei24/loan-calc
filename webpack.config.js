@@ -55,4 +55,16 @@ module.exports = {
       },
     ],
   },
+
+  devtool: 'eval-source-map',
+
+  devServer: {
+    historyApiFallback: true,
+    open: true,
+    compress: true,
+    hot: false,
+    port: 8080,
+    liveReload: true,
+    watchFiles: ['src/*.html'],
+  },
 };
