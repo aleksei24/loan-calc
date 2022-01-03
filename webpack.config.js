@@ -13,4 +13,28 @@ module.exports = {
     filename: 'main.js',
     path: path.resolve(__dirname, 'dist'),
   },
+
+  plugins: [
+    new HtmlWebpackPlugin({
+      title: 'loan-calculator',
+      filename: 'index.html',
+      template: path.resolve(__dirname, 'src/template.html'),
+    }),
+
+    new MiniCssExtractPlugin(),
+
+    new CleanWebpackPlugin(),
+  ],
+
+  module: {
+    rules: [
+      {
+        test: /\.js$/i,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+        },
+      },
+    ],
+  },
 };
