@@ -19,6 +19,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       title: 'loan-calculator',
+      favicon: './src/icon/calc.ico',
       filename: 'index.html',
       template: path.resolve(__dirname, 'src/template.html'),
     }),
