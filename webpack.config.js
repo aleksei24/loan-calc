@@ -66,6 +66,6 @@ module.exports = {
     hot: false,
     port: 8080,
     liveReload: true,
-    watchFiles: ['src/*.html'],
+    watchFiles: ['./src/*.html'],
   },
 };
