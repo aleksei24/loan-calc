@@ -18,7 +18,7 @@ const interestInput = document.querySelector('#interest');
 const paymentInput = document.querySelector('#payment');
 const loanInputs = [amountInput, interestInput, paymentInput];
 [...loanInputs].forEach((el) => {
-  el.classList = 'h-8 rounded';
+  el.classList = 'h-8 border border-black border-solid rounded';
 });
 
 const calcBtn = document.querySelector('#calculate');
